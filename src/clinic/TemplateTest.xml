@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name=">name >url" >
+  <!-- Enter path to server https://systest1.acmgaces.com  http://newdev.devurban.com http://migrate.devurban.com  -->
+  <parameter name="SERVER"  value="http://migrate.devurban.com"/>
+  <parameter name="USER"  value="sagrawal"/>
+  <parameter name="PASS"  value="Pass123"/>
+  <!-- Driver values : 
+  1 - FirefoxDriver
+  2 - InternetExplorerDriver
+  3 - ChromeDriver
+   
+  10 - HtmlUnitDriver with JavascriptEnabled
+  11 - HtmlUnitDriver no Javascript
+  -->
+  <parameter name="DRIVER"  value="1"/>
+  
+  <test name=">name">
+  <parameter name=">parameter"  value=">value"/>
+    	<classes>
+	  	 	  <class name=">class">
+	  	</class>
+  	</classes>
+  </test>
+  
+ </suite>
