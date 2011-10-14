@@ -1,6 +1,6 @@
-package clinic.pageObjects;
+package startProject.pageObjects;
 
-import clinic.PageObjectHelper;
+import startProject.PageObjectHelper;
 
 public class PageProgects extends PageObjectHelper{
 	

@@ -1,8 +1,9 @@
-package clinic.pageObjects;
+package startProject.pageObjects;
 
 import org.openqa.selenium.By;
 
-import clinic.PageObjectHelper;
+import startProject.PageObjectHelper;
+
 
 public class PageHome extends PageObjectHelper {
 	

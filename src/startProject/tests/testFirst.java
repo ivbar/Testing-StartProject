@@ -1,10 +1,11 @@
-package clinic.tests;
+package startProject.tests;
 
 
 import org.testng.annotations.Test;
 
-import clinic.TestHelper;
-import clinic.pageObjects.PageHome;
+import startProject.TestHelper;
+import startProject.pageObjects.PageHome;
+
 
 
 public class testFirst extends TestHelper {
