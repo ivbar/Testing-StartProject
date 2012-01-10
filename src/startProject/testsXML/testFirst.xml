@@ -1,22 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite" >
-  <parameter name="DRIVER"  value="1"/>
- <!-- Enter path to server 
-  https://systest1.acmgaces.com
-  http://newdev.devurban.com
-  http://migrate.devurban.com
-  http://cmigrate1.devurban.com
-  https://staging.acmgaces.com
-  
-  <parameter name="SERVER"  value="http://cms.2droid.net/"/>
-  -->
-  
-   <test name="Click projects">
-    	<classes>
-		  	<class name="clinic.tests.testFirst">
-	  		</class>
-  		</classes>
-  	</test>
-  
+<suite name="Suite">
+	<parameter name="DRIVER" value="1" />
+	<!-- Enter path to server 
+	<parameter name="SERVER" value="http://cms.2droid.net/"/>
+	 -->
+
+	<test name="Click projects">
+		<classes>
+			<class name="startProject.tests.testFirst">
+			</class>
+		</classes>
+	</test>
+
 </suite>

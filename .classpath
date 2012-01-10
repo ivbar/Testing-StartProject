@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Dropbox/code_projects/LIBS/selenium-2.8.0/selenium-java-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Dropbox/code_projects/LIBS/selenium-2.16.1/selenium-java-2.16.1.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/TestingFramework"/>
-	<classpathentry kind="lib" path="C:/Dropbox/code_projects/LIBS/testng-6.2/testng-6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Dropbox/code_projects/LIBS/testng-6.3.1/testng-6.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -18,7 +18,7 @@
   <test name=">name">
   <parameter name=">parameter"  value=">value"/>
     	<classes>
-	  	 	  <class name=">class">
+	  	 	  <class name=">class: do not use it it's just template :) ">
 	  	</class>
   	</classes>
   </test>
