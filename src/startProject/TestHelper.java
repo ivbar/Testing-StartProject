@@ -13,33 +13,35 @@ import org.testng.annotations.Parameters;
 import framework.Framework;
 
 public class TestHelper extends Framework {
-	//Default values
-	protected static final String server_default = "http://cms.2droid.net/";
-	
-	//Current values
-	protected static String server = server_default;
-	
+	// Values
+	protected static String server = "http://cms.2droid.net"; // Default server
+
 	/**
 	 * Getting driver type from xml
-	 * @param DRIVER int - number of driver
-	 * @param SERVER String - url of server (without / at end)
-	 * @param USER String - user name for login
-	 * @param PASS String - password
+	 * 
+	 * @param driverStr
+	 *            int - number of driver
+	 * @param SERVER
+	 *            String - url of server (without / at end)
+	 * @param USER
+	 *            String - user name for login
+	 * @param PASS
+	 *            String - password
 	 */
 	@BeforeSuite(alwaysRun = true)
-	@Parameters({"DRIVER", "SERVER"})
-	protected static void beforeSuite(@Optional("DRIVER") String DRIVER, 
-			@Optional("SERVER")String SERVER) {
-		
-		//Time that we wait for page
-		WaitTime = 5; //sec
-		
-		//Path to screen shot folder
-		PathToFolder = "c:\\tempTest\\"; 
-		
-		//Selecting with what driver to work with
-		if (!DRIVER.equals("DRIVER")) {
-			switch (Integer.parseInt(DRIVER)) {
+	@Parameters({ "DRIVER", "SERVER" })
+	protected static void beforeSuite(@Optional("DRIVER") String driverStr,
+			@Optional("SERVER") String SERVER) {
+
+		// Time that we wait for page
+		WaitTime = 5; // sec
+
+		// Path to screen shot folder
+		PathToFolder = "c:\\tempTest\\";
+
+		// Selecting with what driver to work with
+		if (!driverStr.equals("DRIVER")) {
+			switch (Integer.parseInt(driverStr)) {
 			case 1:
 				driver = new FirefoxDriver();
 				break;
@@ -51,7 +53,7 @@ public class TestHelper extends Framework {
 				break;
 			case 10:
 				driver = new HtmlUnitDriver();
-		    	((HtmlUnitDriver) driver).setJavascriptEnabled(true);
+				((HtmlUnitDriver) driver).setJavascriptEnabled(true);
 				break;
 			case 11:
 				driver = new HtmlUnitDriver();
@@ -60,31 +62,26 @@ public class TestHelper extends Framework {
 				driver = new FirefoxDriver();
 				break;
 			}
-		} else { //default 
+		} else { // default
 			driver = new FirefoxDriver();
 		}
-		
-		
-		//Sawing wait time
+
+		// Sawing wait time
 		wait = new WebDriverWait(driver, WaitTime);
-		
-		//Setting server
-//		if (SERVER.length() > 0 
-//				&& !SERVER.equals("SERVER")) server = SERVER;
-//		
-//		//Setting user
-//		if (USER.length() > 0
-//				&& !USER.equals("USER")) user = USER;
-		
+
+		// Setting server
+		if (SERVER.length() > 0 && !SERVER.equals("SERVER"))
+			server = SERVER;
+
 	}
-	
+
 	/**
 	 * Closing browser after class
 	 */
 	@AfterSuite(alwaysRun = true)
-    protected static void afterSuite() {
-		//Close session
-	    driver.close();
-    }
-	
+	protected static void afterSuite() {
+		// Close session
+		driver.close();
+	}
+
 }
